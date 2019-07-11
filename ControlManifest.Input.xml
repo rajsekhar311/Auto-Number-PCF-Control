@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="APSPCFControls" constructor="AutoNumberControl" version="1.0.0" display-name-key="Auto Number Control" description-key="AutoNumberControl_Desc_Key" control-type="standard">
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="fieldNameProperty" display-name-key="Field Name" description-key="Auto Number field name" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="formatProperty" display-name-key="Auto Number Format" description-key="Provide format to generate Auto Number." of-type="SingleLine.Text" usage="input" required="true" />
+    <!-- 
+      Property node's of-type attribute can be of-type-group attribute. 
+      Example:
+      <type-group name="numbers">
+        <type>Whole.None</type>
+        <type>Currency</type>
+        <type>FP</type>
+        <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+    -->
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/AutoNumberControl.css" order="1" />
+      <!-- UNCOMMENT TO ADD MORE RESOURCES
+      <resx path="strings/AutoNumberControl.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+  </control>
+</manifest>
